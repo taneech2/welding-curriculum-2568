@@ -3,293 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>แผนการเรียน ช่างเชื่อมโลหะ ปวช. 2568</title>
+<title>แผนการเรียน ช่างเชื่อมโลหะ ปวช. 2568 — ทั้ง 6 ภาคเรียน</title>
 <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700;800&family=Kanit:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --fire:   #FF4500;
-    --fire2:  #FF6B35;
-    --steel:  #1A1A2E;
-    --steel2: #16213E;
-    --metal:  #2C3E6B;
-    --spark:  #FFD700;
-    --spark2: #FFA500;
-    --smoke:  #8892A4;
-    --white:  #FFFFFF;
-    --cream:  #FFF8F0;
-    --green:  #27AE60;
-    --blue:   #2980B9;
-    --purple: #8E44AD;
-    --red:    #E74C3C;
+    --fire:#FF4500; --fire2:#FF6B35; --steel:#1A1A2E; --steel2:#16213E;
+    --metal:#2C3E6B; --spark:#FFD700; --spark2:#FFA500;
+    --smoke:#8892A4; --white:#FFFFFF; --cream:#FFF8F0;
+    --green:#27AE60; --blue:#2980B9; --purple:#8E44AD; --red:#E74C3C;
   }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body {
-    font-family: 'Sarabun', sans-serif;
-    background: var(--steel);
-    color: var(--white);
-    width: 1200px;
-    margin: 0 auto;
-  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Sarabun',sans-serif;background:var(--steel);color:var(--white);width:1200px;margin:0 auto;}
 
-  /* ===== HEADER ===== */
-  .header {
-    background: linear-gradient(135deg, #0D0D1A 0%, #1A1A2E 40%, #2C1810 100%);
-    padding: 40px 50px 30px;
-    position: relative;
-    overflow: hidden;
-    border-bottom: 4px solid var(--fire);
-  }
-  .header::before {
-    content: '';
-    position: absolute; top:0; left:0; right:0; bottom:0;
-    background: repeating-linear-gradient(
-      45deg, transparent, transparent 20px,
-      rgba(255,69,0,0.03) 20px, rgba(255,69,0,0.03) 40px
-    );
-  }
-  .header-inner { position: relative; z-index: 1; }
-  .school-badge {
-    display: flex; align-items: center; gap: 16px; margin-bottom: 20px;
-  }
-  .flame-icon {
-    width: 60px; height: 60px;
-    background: linear-gradient(180deg, var(--spark) 0%, var(--fire) 100%);
-    clip-path: polygon(50% 0%, 80% 30%, 100% 60%, 70% 80%, 50% 100%, 30% 80%, 0% 60%, 20% 30%);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 26px; flex-shrink: 0;
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0%,100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,69,0,0.4); }
-    50% { transform: scale(1.05); box-shadow: 0 0 20px 6px rgba(255,69,0,0.2); }
-  }
-  .school-name { font-family: 'Kanit', sans-serif; }
-  .school-name h3 { font-size: 13px; color: var(--smoke); font-weight: 400; letter-spacing: 2px; text-transform: uppercase; }
-  .school-name h1 { font-size: 28px; font-weight: 800; color: var(--white); line-height: 1.1; }
-  .school-name h2 { font-size: 16px; font-weight: 600; color: var(--spark); margin-top: 2px; }
+  .header{background:linear-gradient(135deg,#0D0D1A 0%,#1A1A2E 40%,#2C1810 100%);padding:40px 50px 30px;position:relative;overflow:hidden;border-bottom:4px solid var(--fire);}
+  .header::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,69,0,0.03) 20px,rgba(255,69,0,0.03) 40px);}
+  .header-inner{position:relative;z-index:1;}
+  .school-badge{display:flex;align-items:center;gap:16px;margin-bottom:20px;}
+  .flame-icon{width:60px;height:60px;background:linear-gradient(180deg,var(--spark) 0%,var(--fire) 100%);clip-path:polygon(50% 0%,80% 30%,100% 60%,70% 80%,50% 100%,30% 80%,0% 60%,20% 30%);display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;animation:pulse 2s infinite;}
+  @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.05);}}
+  .school-name{font-family:'Kanit',sans-serif;}
+  .school-name h3{font-size:13px;color:var(--smoke);font-weight:400;letter-spacing:2px;}
+  .school-name h1{font-size:28px;font-weight:800;color:var(--white);line-height:1.1;}
+  .school-name h2{font-size:16px;font-weight:600;color:var(--spark);margin-top:2px;}
+  .header-meta{display:flex;gap:30px;margin-top:16px;flex-wrap:wrap;}
+  .meta-pill{background:rgba(255,255,255,0.08);border:1px solid rgba(255,69,0,0.3);border-radius:20px;padding:6px 16px;font-size:13px;color:var(--smoke);}
+  .meta-pill strong{color:var(--spark2);}
 
-  .header-meta {
-    display: flex; gap: 30px; margin-top: 16px; flex-wrap: wrap;
-  }
-  .meta-pill {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,69,0,0.3);
-    border-radius: 20px; padding: 6px 16px;
-    font-size: 13px; color: var(--smoke);
-  }
-  .meta-pill strong { color: var(--spark2); }
+  .audience-strip{background:linear-gradient(90deg,var(--fire) 0%,var(--fire2) 50%,var(--spark2) 100%);padding:14px 50px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+  .aud-label{font-size:12px;font-weight:700;letter-spacing:1px;color:rgba(255,255,255,0.7);}
+  .aud-tag{background:rgba(0,0,0,0.25);border-radius:12px;padding:4px 12px;font-size:12px;font-weight:600;color:var(--white);}
 
-  /* ===== AUDIENCE STRIP ===== */
-  .audience-strip {
-    background: linear-gradient(90deg, var(--fire) 0%, var(--fire2) 50%, var(--spark2) 100%);
-    padding: 14px 50px;
-    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
-  }
-  .aud-label { font-size: 12px; font-weight: 700; letter-spacing: 1px; color: rgba(255,255,255,0.7); }
-  .aud-tag {
-    background: rgba(0,0,0,0.25); border-radius: 12px;
-    padding: 4px 12px; font-size: 12px; font-weight: 600; color: var(--white);
-    display: flex; align-items: center; gap: 5px;
-  }
+  /* overview */
+  .section{padding:30px 50px;}
+  .section-title{font-family:'Kanit',sans-serif;font-size:18px;font-weight:700;color:var(--spark);text-transform:uppercase;letter-spacing:2px;margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+  .section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(255,215,0,0.4),transparent);}
+  .overview-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  .ov-card{background:linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));border:1px solid rgba(255,215,0,0.2);border-radius:14px;padding:20px;text-align:center;position:relative;overflow:hidden;}
+  .ov-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--fire),var(--spark));}
+  .ov-num{font-family:'Kanit',sans-serif;font-size:42px;font-weight:800;color:var(--spark);line-height:1;}
+  .ov-unit{font-size:13px;color:var(--smoke);margin-top:2px;}
+  .ov-label{font-size:13px;font-weight:600;color:var(--white);margin-top:8px;}
+  .credit-bar-wrap{margin-top:24px;}
+  .credit-bar-label{font-size:13px;color:var(--smoke);margin-bottom:8px;}
+  .credit-bar{height:36px;border-radius:18px;display:flex;overflow:hidden;background:rgba(255,255,255,0.05);}
+  .cb-seg{display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--white);}
+  .cb-legend{display:flex;gap:20px;margin-top:10px;flex-wrap:wrap;}
+  .cb-dot{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--smoke);}
+  .dot{width:10px;height:10px;border-radius:50%;}
 
-  /* ===== OVERVIEW CARDS ===== */
-  .section { padding: 30px 50px; }
-  .section-title {
-    font-family: 'Kanit', sans-serif; font-size: 18px; font-weight: 700;
-    color: var(--spark); text-transform: uppercase; letter-spacing: 2px;
-    margin-bottom: 20px; display: flex; align-items: center; gap: 10px;
-  }
-  .section-title::after {
-    content: ''; flex: 1; height: 1px;
-    background: linear-gradient(90deg, rgba(255,215,0,0.4), transparent);
-  }
+  /* semester cards */
+  .sem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .sem-card{background:linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.1);border-radius:14px;overflow:hidden;}
+  .sem-header{padding:14px 18px;display:flex;align-items:center;justify-content:space-between;}
+  .t1-hdr{background:linear-gradient(135deg,#1a3a5c,#2980B9);}
+  .t2-hdr{background:linear-gradient(135deg,#3d1a5c,#8E44AD);}
+  .sem-title{font-family:'Kanit',sans-serif;font-size:15px;font-weight:700;color:var(--white);}
+  .sem-cr{background:rgba(255,255,255,0.2);border-radius:20px;padding:3px 10px;font-size:12px;font-weight:700;color:var(--white);}
+  .subj-list{padding:12px;}
+  .subj-item{display:flex;align-items:flex-start;gap:8px;padding:7px 8px;border-radius:8px;margin-bottom:4px;}
+  .subj-item:hover{background:rgba(255,255,255,0.05);}
+  .subj-dot{width:8px;height:8px;border-radius:50%;margin-top:4px;flex-shrink:0;}
+  .subj-info{flex:1;}
+  .subj-n{font-size:12px;font-weight:600;color:var(--white);}
+  .subj-meta{font-size:10.5px;color:var(--smoke);margin-top:1px;}
+  .subj-cr-pill{font-size:10px;font-weight:700;border-radius:10px;padding:2px 7px;flex-shrink:0;}
+  .cr-c{background:rgba(41,128,185,0.25);color:#74B9FF;}
+  .cr-b{background:rgba(39,174,96,0.25);color:#6FCFA0;}
+  .cr-s{background:rgba(255,69,0,0.25);color:#FF9070;}
+  .cr-e{background:rgba(142,68,173,0.25);color:#D29BFF;}
+  .cr-a{background:rgba(255,215,0,0.15);color:var(--spark);}
+  .cat-tag{font-size:10px;font-weight:700;color:var(--smoke);padding:4px 8px 2px;letter-spacing:1px;margin-top:6px;}
 
-  .overview-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-  .ov-card {
-    background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-    border: 1px solid rgba(255,215,0,0.2);
-    border-radius: 14px; padding: 20px; text-align: center;
-    position: relative; overflow: hidden;
-  }
-  .ov-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-    background: linear-gradient(90deg, var(--fire), var(--spark));
-  }
-  .ov-num {
-    font-family: 'Kanit', sans-serif; font-size: 42px; font-weight: 800;
-    color: var(--spark); line-height: 1;
-  }
-  .ov-unit { font-size: 13px; color: var(--smoke); margin-top: 2px; }
-  .ov-label { font-size: 13px; font-weight: 600; color: var(--white); margin-top: 8px; }
+  /* career */
+  .career-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .career-card{background:linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));border:1px solid rgba(255,215,0,0.15);border-radius:12px;padding:18px;border-top:3px solid;}
+  .career-card.c1{border-top-color:var(--fire);}
+  .career-card.c2{border-top-color:var(--blue);}
+  .career-card.c3{border-top-color:var(--green);}
+  .career-icon{font-size:28px;margin-bottom:8px;}
+  .career-title{font-family:'Kanit',sans-serif;font-size:15px;font-weight:700;color:var(--white);margin-bottom:8px;}
+  .career-list li{font-size:12px;color:var(--smoke);margin-bottom:4px;padding-left:14px;position:relative;list-style:none;}
+  .career-list li::before{content:'›';position:absolute;left:0;color:var(--spark2);}
 
-  /* ===== CREDIT BREAKDOWN BAR ===== */
-  .credit-bar-wrap { margin-top: 24px; }
-  .credit-bar-label { font-size: 13px; color: var(--smoke); margin-bottom: 8px; }
-  .credit-bar {
-    height: 36px; border-radius: 18px;
-    display: flex; overflow: hidden; background: rgba(255,255,255,0.05);
-  }
-  .cb-seg {
-    display: flex; align-items: center; justify-content: center;
-    font-size: 12px; font-weight: 700; color: var(--white);
-    transition: flex 0.3s;
-  }
-  .cb-legend {
-    display: flex; gap: 20px; margin-top: 10px; flex-wrap: wrap;
-  }
-  .cb-dot {
-    display: flex; align-items: center; gap: 6px;
-    font-size: 12px; color: var(--smoke);
-  }
-  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .footer{background:#0D0D1A;padding:20px 50px;display:flex;align-items:center;justify-content:space-between;border-top:2px solid var(--fire);font-size:11px;color:var(--smoke);}
+  .footer strong{color:var(--spark);}
+  .divider{height:4px;background:linear-gradient(90deg,var(--fire),var(--spark2),var(--fire));}
 
-  /* ===== TIMELINE GRID ===== */
-  .timeline-wrap { overflow-x: auto; }
-  .tl-grid {
-    display: grid;
-    grid-template-columns: 200px repeat(6, 1fr);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 12px; overflow: hidden;
-    min-width: 900px;
-  }
-
-  .tl-cell {
-    padding: 10px 8px;
-    border-right: 1px solid rgba(255,255,255,0.06);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    font-size: 11.5px;
-    line-height: 1.4;
-  }
-  .tl-cell:last-child { border-right: none; }
-
-  /* Year header */
-  .yr-hdr {
-    background: var(--steel2);
-    font-family: 'Kanit', sans-serif; font-size: 14px; font-weight: 700;
-    text-align: center; padding: 12px; color: var(--spark);
-    border-right: 2px solid rgba(255,215,0,0.3);
-    border-bottom: 2px solid rgba(255,255,255,0.1);
-  }
-  .yr-hdr.year-col { background: #0D0D1A; font-size: 12px; color: var(--smoke); }
-
-  /* Term header */
-  .term-hdr {
-    text-align: center; padding: 10px 8px;
-    font-size: 12px; font-weight: 700;
-    border-bottom: 2px solid rgba(255,255,255,0.1);
-    border-right: 1px solid rgba(255,255,255,0.06);
-  }
-  .t1 { background: rgba(41,128,185,0.25); color: #74B9FF; }
-  .t2 { background: rgba(142,68,173,0.25); color: #D29BFF; }
-
-  /* Subject category label */
-  .cat-label {
-    background: rgba(255,69,0,0.1);
-    font-weight: 700; font-size: 11px;
-    color: var(--fire2); letter-spacing: 0.5px;
-    padding: 8px 10px;
-    border-bottom: 1px solid rgba(255,69,0,0.2);
-    border-right: 1px solid rgba(255,255,255,0.06);
-  }
-  .cat-empty {
-    background: rgba(255,69,0,0.05);
-    border-bottom: 1px solid rgba(255,69,0,0.15);
-    border-right: 1px solid rgba(255,255,255,0.06);
-  }
-
-  /* Subject row */
-  .subj-name-cell {
-    background: rgba(255,255,255,0.03);
-    font-size: 11.5px; color: var(--white);
-    padding: 9px 10px; display: flex; flex-direction: column;
-    border-right: 1px solid rgba(255,255,255,0.06);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-  }
-  .subj-code { font-size: 9.5px; color: var(--smoke); margin-top: 2px; font-family: monospace; }
-
-  .subj-fill {
-    display: flex; align-items: center; justify-content: center;
-    flex-direction: column; gap: 2px;
-  }
-  .badge {
-    border-radius: 6px; padding: 3px 8px;
-    font-size: 11px; font-weight: 700;
-    white-space: nowrap;
-  }
-  .badge-core   { background: rgba(41,128,185,0.3); color: #74B9FF; border: 1px solid rgba(41,128,185,0.4); }
-  .badge-base   { background: rgba(39,174,96,0.3); color: #6FCFA0; border: 1px solid rgba(39,174,96,0.4); }
-  .badge-spec   { background: rgba(255,69,0,0.3); color: #FF9070; border: 1px solid rgba(255,69,0,0.4); }
-  .badge-elec   { background: rgba(142,68,173,0.3); color: #D29BFF; border: 1px solid rgba(142,68,173,0.4); }
-  .badge-act    { background: rgba(255,215,0,0.15); color: var(--spark); border: 1px solid rgba(255,215,0,0.3); }
-  .cr-label { font-size: 9px; color: var(--smoke); }
-
-  .empty-cell { background: rgba(0,0,0,0.2); }
-
-  /* ===== SUBJECT CARDS BY SEMESTER ===== */
-  .sem-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
-  .sem-card {
-    background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 14px; overflow: hidden;
-  }
-  .sem-header {
-    padding: 14px 18px;
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  .t1-hdr { background: linear-gradient(135deg, #1a3a5c, #2980B9); }
-  .t2-hdr { background: linear-gradient(135deg, #3d1a5c, #8E44AD); }
-  .sem-title { font-family: 'Kanit', sans-serif; font-size: 15px; font-weight: 700; color: var(--white); }
-  .sem-cr {
-    background: rgba(255,255,255,0.2); border-radius: 20px;
-    padding: 3px 10px; font-size: 12px; font-weight: 700; color: var(--white);
-  }
-  .subj-list { padding: 12px; }
-  .subj-item {
-    display: flex; align-items: flex-start; gap: 8px;
-    padding: 7px 8px; border-radius: 8px; margin-bottom: 4px;
-    transition: background 0.2s;
-  }
-  .subj-item:hover { background: rgba(255,255,255,0.05); }
-  .subj-dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 4px; flex-shrink: 0; }
-  .subj-info { flex: 1; }
-  .subj-n { font-size: 12px; font-weight: 600; color: var(--white); }
-  .subj-meta { font-size: 10.5px; color: var(--smoke); margin-top: 1px; }
-  .subj-cr-pill {
-    font-size: 10px; font-weight: 700; border-radius: 10px;
-    padding: 2px 7px; flex-shrink: 0;
-  }
-  .cr-c { background:rgba(41,128,185,0.25); color:#74B9FF; }
-  .cr-b { background:rgba(39,174,96,0.25); color:#6FCFA0; }
-  .cr-s { background:rgba(255,69,0,0.25); color:#FF9070; }
-  .cr-e { background:rgba(142,68,173,0.25); color:#D29BFF; }
-  .cr-a { background:rgba(255,215,0,0.15); color:var(--spark); }
-
-  /* ===== CAREER PATH ===== */
-  .career-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
-  .career-card {
-    background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-    border: 1px solid rgba(255,215,0,0.15); border-radius: 12px; padding: 18px;
-    border-top: 3px solid;
-  }
-  .career-card.c1 { border-top-color: var(--fire); }
-  .career-card.c2 { border-top-color: var(--blue); }
-  .career-card.c3 { border-top-color: var(--green); }
-  .career-icon { font-size: 28px; margin-bottom: 8px; }
-  .career-title { font-family: 'Kanit', sans-serif; font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
-  .career-list li { font-size: 12px; color: var(--smoke); margin-bottom: 4px; padding-left: 14px; position: relative; list-style: none; }
-  .career-list li::before { content: '›'; position: absolute; left: 0; color: var(--spark2); }
-
-  /* ===== FOOTER ===== */
-  .footer {
-    background: #0D0D1A; padding: 20px 50px;
-    display: flex; align-items: center; justify-content: space-between;
-    border-top: 2px solid var(--fire); font-size: 11px; color: var(--smoke);
-  }
-  .footer strong { color: var(--spark); }
-  .divider {
-    height: 4px;
-    background: linear-gradient(90deg, var(--fire), var(--spark2), var(--fire));
-  }
+  /* page break note */
+  .page-note{background:rgba(255,215,0,0.06);border:1px dashed rgba(255,215,0,0.2);border-radius:10px;padding:10px 16px;margin:0 0 16px;font-size:12px;color:var(--smoke);display:flex;align-items:center;gap:8px;}
 </style>
 </head>
 <body>
@@ -302,7 +103,7 @@
       <div class="school-name">
         <h3>วิทยาลัยการอาชีพบุรีรัมย์ · สอศ.</h3>
         <h1>แผนการเรียน สาขาช่างเชื่อมโลหะ</h1>
-        <h2>ระดับประกาศนียบัตรวิชาชีพ (ปวช.) หลักสูตร พ.ศ. 2567</h2>
+        <h2>ระดับประกาศนียบัตรวิชาชีพ (ปวช.) หลักสูตร พ.ศ. 2567 — ทั้ง 6 ภาคเรียน</h2>
       </div>
     </div>
     <div class="header-meta">
@@ -330,35 +131,18 @@
 <div class="section">
   <div class="section-title">📊 ภาพรวมหลักสูตร</div>
   <div class="overview-grid">
-    <div class="ov-card">
-      <div class="ov-num">100</div>
-      <div class="ov-unit">หน่วยกิต</div>
-      <div class="ov-label">รวมตลอดหลักสูตร</div>
-    </div>
-    <div class="ov-card">
-      <div class="ov-num">20</div>
-      <div class="ov-unit">หน่วยกิต</div>
-      <div class="ov-label">สมรรถนะแกนกลาง<br><small style="font-size:10px;color:#8892A4">(ภาษา · คณิต · วิทย์ · สังคม)</small></div>
-    </div>
-    <div class="ov-card">
-      <div class="ov-num">70</div>
-      <div class="ov-unit">หน่วยกิต</div>
-      <div class="ov-label">สมรรถนะวิชาชีพ<br><small style="font-size:10px;color:#8892A4">(พื้นฐาน 22 + เฉพาะ 48)</small></div>
-    </div>
-    <div class="ov-card">
-      <div class="ov-num">10</div>
-      <div class="ov-unit">หน่วยกิต</div>
-      <div class="ov-label">วิชาเลือกเสรี<br><small style="font-size:10px;color:#8892A4">+ กิจกรรมเสริมหลักสูตร</small></div>
-    </div>
+    <div class="ov-card"><div class="ov-num">100</div><div class="ov-unit">หน่วยกิต</div><div class="ov-label">รวมตลอดหลักสูตร</div></div>
+    <div class="ov-card"><div class="ov-num">20</div><div class="ov-unit">หน่วยกิต</div><div class="ov-label">สมรรถนะแกนกลาง<br><small style="font-size:10px;color:#8892A4">ภาษา · คณิต · วิทย์ · สังคม</small></div></div>
+    <div class="ov-card"><div class="ov-num">70</div><div class="ov-unit">หน่วยกิต</div><div class="ov-label">สมรรถนะวิชาชีพ<br><small style="font-size:10px;color:#8892A4">พื้นฐาน 22 + เฉพาะ 48</small></div></div>
+    <div class="ov-card"><div class="ov-num">10</div><div class="ov-unit">หน่วยกิต</div><div class="ov-label">วิชาเลือกเสรี<br><small style="font-size:10px;color:#8892A4">+ กิจกรรมเสริมหลักสูตร</small></div></div>
   </div>
-
-  <div class="credit-bar-wrap" style="margin-top:20px;">
+  <div class="credit-bar-wrap">
     <div class="credit-bar-label">สัดส่วนหน่วยกิต</div>
     <div class="credit-bar">
-      <div class="cb-seg" style="flex:20; background:linear-gradient(90deg,#2980B9,#3498DB);">แกนกลาง 20%</div>
-      <div class="cb-seg" style="flex:22; background:linear-gradient(90deg,#27AE60,#2ECC71);">วิชาชีพพื้นฐาน 22%</div>
-      <div class="cb-seg" style="flex:48; background:linear-gradient(90deg,#E74C3C,#FF6B35);">วิชาชีพเฉพาะ 48%</div>
-      <div class="cb-seg" style="flex:10; background:linear-gradient(90deg,#8E44AD,#9B59B6);">เลือกเสรี 10%</div>
+      <div class="cb-seg" style="flex:20;background:linear-gradient(90deg,#2980B9,#3498DB);">แกนกลาง 20%</div>
+      <div class="cb-seg" style="flex:22;background:linear-gradient(90deg,#27AE60,#2ECC71);">วิชาชีพพื้นฐาน 22%</div>
+      <div class="cb-seg" style="flex:48;background:linear-gradient(90deg,#E74C3C,#FF6B35);">วิชาชีพเฉพาะ 48%</div>
+      <div class="cb-seg" style="flex:10;background:linear-gradient(90deg,#8E44AD,#9B59B6);">เลือกเสรี 10%</div>
     </div>
     <div class="cb-legend">
       <div class="cb-dot"><div class="dot" style="background:#3498DB"></div>สมรรถนะแกนกลาง (20 นก.)</div>
@@ -371,149 +155,158 @@
 
 <div class="divider"></div>
 
-<!-- SEMESTER-BY-SEMESTER -->
+<!-- ===== ปวช. ปีที่ 1 ===== -->
 <div class="section">
-  <div class="section-title">📅 รายวิชาแต่ละภาคเรียน</div>
+  <div class="section-title">📅 ปวช. ปีที่ 1 — ภาคเรียน 1/2568 และ 2/2568</div>
   <div class="sem-grid">
 
-    <!-- ภาค 1/68 -->
+    <!-- ภาค 1/2568 -->
     <div class="sem-card">
       <div class="sem-header t1-hdr">
-        <div class="sem-title">🔵 ภาคเรียน 1 / 2568<br><small style="font-size:11px;font-weight:400;color:rgba(255,255,255,0.7)">ปวช. ปีที่ 1</small></div>
+        <div class="sem-title">🔵 ภาคเรียน 1 / 2568<br><small style="font-size:11px;font-weight:400;opacity:0.7">ปวช. ปีที่ 1</small></div>
+        <div class="sem-cr">21 นก.</div>
+      </div>
+      <div class="subj-list">
+        <div class="cat-tag">แกนกลาง</div>
+        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">ภาษาไทยเพื่อการสื่อสาร</div><div class="subj-meta">20000-1101 · ป.2ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">ภาษาอังกฤษเพื่อการสื่อสาร</div><div class="subj-meta">20000-1201 · ป.2ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">วิทยาศาสตร์พื้นฐานอาชีพ</div><div class="subj-meta">20000-1301 · ท.1+ป.2ชม.</div></div><div class="subj-cr-pill cr-c">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">คณิตศาสตร์พื้นฐานอาชีพ</div><div class="subj-meta">20000-1401 · ท.2ชม.</div></div><div class="subj-cr-pill cr-c">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">ประวัติศาสตร์ชาติไทย</div><div class="subj-meta">20000-1502 · ป.2ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">พลศึกษาเพื่อพัฒนาสุขภาพ</div><div class="subj-meta">20000-1603 · ป.2ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
+        <div class="cat-tag">วิชาชีพพื้นฐาน</div>
+        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">การใช้เทคโนโลยีดิจิทัลเพื่ออาชีพ</div><div class="subj-meta">20001-1005 · ท.2+ป.2ชม.</div></div><div class="subj-cr-pill cr-b">3 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">วัสดุงานช่างอุตสาหกรรม</div><div class="subj-meta">20100-1002 · ท.2ชม.</div></div><div class="subj-cr-pill cr-b">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">งานฝึกฝีมือ</div><div class="subj-meta">20100-1003 · ป.6ชม.</div></div><div class="subj-cr-pill cr-b">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 งานเชื่อมและโลหะแผ่นเบื้องต้น</div><div class="subj-meta">20100-1004 · ท.1+ป.3ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="cat-tag">วิชาชีพเฉพาะ</div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 กระบวนการเชื่อม</div><div class="subj-meta">20103-2009 · ท.2ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 มาตรฐานงานเชื่อมเบื้องต้น</div><div class="subj-meta">20103-2011 · ท.2ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FFD700"></div><div class="subj-info"><div class="subj-n">กิจกรรมลูกเสือวิสามัญ 1</div><div class="subj-meta">20000-2001 · ป.2ชม./สัปดาห์</div></div><div class="subj-cr-pill cr-a">ไม่นับนก.</div></div>
+      </div>
+    </div>
+
+    <!-- ภาค 2/2568 -->
+    <div class="sem-card">
+      <div class="sem-header t2-hdr">
+        <div class="sem-title">🟣 ภาคเรียน 2 / 2568<br><small style="font-size:11px;font-weight:400;opacity:0.7">ปวช. ปีที่ 1</small></div>
         <div class="sem-cr">19 นก.</div>
       </div>
       <div class="subj-list">
-        <div style="font-size:10px;font-weight:700;color:#8892A4;padding:4px 8px 2px;letter-spacing:1px;">แกนกลาง</div>
-        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">ภาษาไทยเพื่อการสื่อสาร</div><div class="subj-meta">20000-1101 · ป. 2 ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">ภาษาอังกฤษเพื่อการสื่อสาร</div><div class="subj-meta">20000-1201 · ป. 2 ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">วิทยาศาสตร์พื้นฐานอาชีพ</div><div class="subj-meta">20000-1301 · ท. 1 + ป. 2 ชม.</div></div><div class="subj-cr-pill cr-c">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">คณิตศาสตร์พื้นฐานอาชีพ</div><div class="subj-meta">20000-1401 · ท. 2 ชม.</div></div><div class="subj-cr-pill cr-c">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">ประวัติศาสตร์ชาติไทย</div><div class="subj-meta">20000-1502 · ป. 2 ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">พลศึกษาเพื่อพัฒนาสุขภาพ</div><div class="subj-meta">20000-1603 · ป. 2 ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
-        <div style="font-size:10px;font-weight:700;color:#8892A4;padding:4px 8px 2px;letter-spacing:1px;margin-top:6px;">วิชาชีพ</div>
-        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">วัสดุงานช่างอุตสาหกรรม</div><div class="subj-meta">20100-1002 · ท. 2 ชม.</div></div><div class="subj-cr-pill cr-b">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">งานฝึกฝีมือ</div><div class="subj-meta">20100-1003 · ป. 6 ชม.</div></div><div class="subj-cr-pill cr-b">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 งานเชื่อมและโลหะแผ่นเบื้องต้น</div><div class="subj-meta">20100-1004 · ท. 1 + ป. 3 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">การใช้เทคโนโลยีดิจิทัลเพื่ออาชีพ</div><div class="subj-meta">20001-1005 · ท. 2 + ป. 2 ชม.</div></div><div class="subj-cr-pill cr-b">3 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 กระบวนการเชื่อม</div><div class="subj-meta">20103-2009 · ท. 2 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 มาตรฐานงานเชื่อมเบื้องต้น</div><div class="subj-meta">20103-2011 · ท. 2 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FFD700"></div><div class="subj-info"><div class="subj-n">กิจกรรมลูกเสือวิสามัญ 1</div><div class="subj-meta">20000-2001 · ป. 2 ชม./สัปดาห์</div></div><div class="subj-cr-pill cr-a">ไม่นับนก.</div></div>
+        <div class="cat-tag">แกนกลาง</div>
+        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">ภาษาไทยเพื่ออาชีพ</div><div class="subj-meta">20000-1102 · ป.2ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">การฟังและการพูดภาษาอังกฤษ</div><div class="subj-meta">20000-1203 · ป.2ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">หน้าที่พลเมืองและศีลธรรม</div><div class="subj-meta">20000-1501 · ท.2ชม.</div></div><div class="subj-cr-pill cr-c">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">เพศวิถีศึกษา</div><div class="subj-meta">20000-1602 · ท.1ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
+        <div class="cat-tag">วิชาชีพพื้นฐาน</div>
+        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">สุขภาพ ความปลอดภัยและสิ่งแวดล้อม</div><div class="subj-meta">20001-1001 · ท.1+ป.2ชม.</div></div><div class="subj-cr-pill cr-b">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">การพัฒนาอย่างยั่งยืน</div><div class="subj-meta">20001-1002 · ท.1+ป.2ชม.</div></div><div class="subj-cr-pill cr-b">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">เขียนแบบเทคนิคเบื้องต้น</div><div class="subj-meta">20100-1001 · ท.1+ป.3ชม.</div></div><div class="subj-cr-pill cr-b">2 นก.</div></div>
+        <div class="cat-tag">วิชาชีพเฉพาะ</div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 งานเชื่อมโลหะเบื้องต้น</div><div class="subj-meta">20103-2001 · ป.6ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 เชื่อมอาร์กด้วยลวดเชื่อมหุ้มฟลักซ์ 1</div><div class="subj-meta">20103-2002 · ป.6ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 ทดสอบแบบทำลายสภาพ</div><div class="subj-meta">20103-2004 · ท.1+ป.3ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 เชื่อมอาร์กทังสเตนแก๊สคลุม 1</div><div class="subj-meta">20103-2006 · ป.6ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FFD700"></div><div class="subj-info"><div class="subj-n">กิจกรรมลูกเสือวิสามัญ 2</div><div class="subj-meta">20000-2002 · ป.2ชม./สัปดาห์</div></div><div class="subj-cr-pill cr-a">ไม่นับนก.</div></div>
       </div>
     </div>
 
-    <!-- ภาค 2/68 -->
-    <div class="sem-card">
-      <div class="sem-header t2-hdr">
-        <div class="sem-title">🟣 ภาคเรียน 2 / 2568<br><small style="font-size:11px;font-weight:400;color:rgba(255,255,255,0.7)">ปวช. ปีที่ 1</small></div>
-        <div class="sem-cr">20 นก.</div>
-      </div>
-      <div class="subj-list">
-        <div style="font-size:10px;font-weight:700;color:#8892A4;padding:4px 8px 2px;letter-spacing:1px;">แกนกลาง</div>
-        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">ภาษาไทยเพื่ออาชีพ</div><div class="subj-meta">20000-1102 · ป. 2 ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">การฟังและพูดภาษาอังกฤษ</div><div class="subj-meta">20000-1203 · ป. 2 ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">หน้าที่พลเมืองและศีลธรรม</div><div class="subj-meta">20000-1501 · ท. 2 ชม.</div></div><div class="subj-cr-pill cr-c">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">เพศวิถีศึกษา</div><div class="subj-meta">20000-1602 · ท. 1 ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
-        <div style="font-size:10px;font-weight:700;color:#8892A4;padding:4px 8px 2px;letter-spacing:1px;margin-top:6px;">วิชาชีพ</div>
-        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">เขียนแบบเทคนิคเบื้องต้น</div><div class="subj-meta">20100-1001 · ท. 1 + ป. 3 ชม.</div></div><div class="subj-cr-pill cr-b">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">สุขภาพ ความปลอดภัยและสิ่งแวดล้อม</div><div class="subj-meta">20001-1001 · ท. 1 + ป. 2 ชม.</div></div><div class="subj-cr-pill cr-b">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">การพัฒนาอย่างยั่งยืน</div><div class="subj-meta">20001-1002 · ท. 1 + ป. 2 ชม.</div></div><div class="subj-cr-pill cr-b">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 งานเชื่อมโลหะเบื้องต้น</div><div class="subj-meta">20103-2001 · ป. 6 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 เชื่อมอาร์กลวดเชื่อมหุ้มฟลักซ์ 1</div><div class="subj-meta">20103-2002 · ป. 6 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 ทดสอบแบบทำลายสภาพ</div><div class="subj-meta">20103-2004 · ท. 1 + ป. 3 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 เชื่อมอาร์กทังสเตนแก๊สคลุม 1 (TIG)</div><div class="subj-meta">20103-2006 · ป. 6 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FFD700"></div><div class="subj-info"><div class="subj-n">กิจกรรมลูกเสือวิสามัญ 2</div><div class="subj-meta">20000-2002 · ป. 2 ชม./สัปดาห์</div></div><div class="subj-cr-pill cr-a">ไม่นับนก.</div></div>
-      </div>
-    </div>
-
-    <!-- ภาค 1/69 -->
+    <!-- ภาค 1/2569 -->
     <div class="sem-card">
       <div class="sem-header t1-hdr">
-        <div class="sem-title">🔵 ภาคเรียน 1 / 2569<br><small style="font-size:11px;font-weight:400;color:rgba(255,255,255,0.7)">ปวช. ปีที่ 2</small></div>
+        <div class="sem-title">🔵 ภาคเรียน 1 / 2569<br><small style="font-size:11px;font-weight:400;opacity:0.7">ปวช. ปีที่ 2</small></div>
         <div class="sem-cr">17 นก.</div>
       </div>
       <div class="subj-list">
-        <div style="font-size:10px;font-weight:700;color:#8892A4;padding:4px 8px 2px;letter-spacing:1px;">แกนกลาง</div>
-        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">ภาษาอังกฤษเพื่องานช่างอุตสาหกรรม</div><div class="subj-meta">20000-1206 · ป. 2 ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">คณิตศาสตร์อุตสาหกรรม</div><div class="subj-meta">20000-1402 · ท. 2 ชม.</div></div><div class="subj-cr-pill cr-c">2 นก.</div></div>
-        <div style="font-size:10px;font-weight:700;color:#8892A4;padding:4px 8px 2px;letter-spacing:1px;margin-top:6px;">วิชาชีพ</div>
-        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">งานไฟฟ้าและอิเล็กทรอนิกส์เบื้องต้น</div><div class="subj-meta">20100-1005 · ท. 1 + ป. 3 ชม.</div></div><div class="subj-cr-pill cr-b">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">งานเครื่องมือกลเบื้องต้น</div><div class="subj-meta">20100-1006 · ท. 1 + ป. 3 ชม.</div></div><div class="subj-cr-pill cr-b">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 เชื่อมอาร์กโลหะแก๊สคลุม 1 (MIG)</div><div class="subj-meta">20103-2007 · ป. 6 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 คณิตศาสตร์ช่างเชื่อม</div><div class="subj-meta">20103-2010 · ท. 2 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 ผลิตภัณฑ์โลหะแผ่น 1</div><div class="subj-meta">20103-2012 · ป. 6 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 เขียนแบบงานเชื่อมด้วยคอมพิวเตอร์</div><div class="subj-meta">20103-2013 · ท. 1 + ป. 2 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#8E44AD"></div><div class="subj-info"><div class="subj-n">งานออกแบบผลิตภัณฑ์</div><div class="subj-meta">20103-2028 · ป. 6 ชม. (วิชาเลือก)</div></div><div class="subj-cr-pill cr-e">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FFD700"></div><div class="subj-info"><div class="subj-n">กิจกรรมเสริมสร้างสุจริต จิตอาสา</div><div class="subj-meta">20000-2003 · ป. 2 ชม./สัปดาห์</div></div><div class="subj-cr-pill cr-a">ไม่นับนก.</div></div>
+        <div class="cat-tag">แกนกลาง</div>
+        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">ภาษาอังกฤษเพื่องานช่างอุตสาหกรรม</div><div class="subj-meta">20000-1206 · ป.2ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">คณิตศาสตร์อุตสาหกรรม</div><div class="subj-meta">20000-1402 · ท.2ชม.</div></div><div class="subj-cr-pill cr-c">2 นก.</div></div>
+        <div class="cat-tag">วิชาชีพพื้นฐาน</div>
+        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">งานไฟฟ้าและอิเล็กทรอนิกส์เบื้องต้น</div><div class="subj-meta">20100-1005 · ท.1+ป.3ชม.</div></div><div class="subj-cr-pill cr-b">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">งานเครื่องมือกลเบื้องต้น</div><div class="subj-meta">20100-1006 · ท.1+ป.3ชม.</div></div><div class="subj-cr-pill cr-b">2 นก.</div></div>
+        <div class="cat-tag">วิชาชีพเฉพาะ</div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 เชื่อมอาร์กโลหะแก๊สคลุม 1</div><div class="subj-meta">20103-2007 · ป.6ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 คณิตศาสตร์ช่างเชื่อม</div><div class="subj-meta">20103-2010 · ท.2ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 ผลิตภัณฑ์โลหะแผ่น 1</div><div class="subj-meta">20103-2012 · ป.6ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 เขียนแบบงานเชื่อมและโลหะแผ่นด้วยโปรแกรมคอมพิวเตอร์</div><div class="subj-meta">20103-2013 · ท.1+ป.2ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="cat-tag">วิชาเลือกเสรี</div>
+        <div class="subj-item"><div class="subj-dot" style="background:#8E44AD"></div><div class="subj-info"><div class="subj-n">งานออกแบบผลิตภัณฑ์</div><div class="subj-meta">20103-2028 · ป.6ชม.</div></div><div class="subj-cr-pill cr-e">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FFD700"></div><div class="subj-info"><div class="subj-n">กิจกรรมเสริมสร้างสุจริต จิตอาสา</div><div class="subj-meta">20000-2003 · ป.2ชม./สัปดาห์</div></div><div class="subj-cr-pill cr-a">ไม่นับนก.</div></div>
       </div>
     </div>
 
-    <!-- ภาค 2/69 -->
+    <!-- ภาค 2/2569 -->
     <div class="sem-card">
       <div class="sem-header t2-hdr">
-        <div class="sem-title">🟣 ภาคเรียน 2 / 2569<br><small style="font-size:11px;font-weight:400;color:rgba(255,255,255,0.7)">ปวช. ปีที่ 2</small></div>
-        <div class="sem-cr">18 นก.</div>
+        <div class="sem-title">🟣 ภาคเรียน 2 / 2569<br><small style="font-size:11px;font-weight:400;opacity:0.7">ปวช. ปีที่ 2</small></div>
+        <div class="sem-cr">15 นก.</div>
       </div>
       <div class="subj-list">
-        <div style="font-size:10px;font-weight:700;color:#8892A4;padding:4px 8px 2px;letter-spacing:1px;">แกนกลาง</div>
-        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">ภาษาอังกฤษสถานประกอบการ</div><div class="subj-meta">20000-1204 · ป. 2 ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">ภาษาอังกฤษอินเทอร์เน็ต</div><div class="subj-meta">20000-1205 · ป. 2 ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
-        <div style="font-size:10px;font-weight:700;color:#8892A4;padding:4px 8px 2px;letter-spacing:1px;margin-top:6px;">วิชาชีพ</div>
-        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">กฎหมายแรงงาน</div><div class="subj-meta">20001-1004 · ท. 1 ชม.</div></div><div class="subj-cr-pill cr-b">1 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">ธุรกิจเบื้องต้น</div><div class="subj-meta">20001-1003 · ท. 1 + ป. 2 ชม.</div></div><div class="subj-cr-pill cr-b">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 เชื่อมอาร์กลวดเชื่อมหุ้มฟลักซ์ 2</div><div class="subj-meta">20103-2003 · ป. 6 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 เชื่อมอาร์กทังสเตนแก๊สคลุม 2 (TIG)</div><div class="subj-meta">20103-2020 · ป. 6 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 เชื่อมอาร์กโลหะแก๊สคลุม 2 (MIG)</div><div class="subj-meta">20103-2021 · ป. 6 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#8E44AD"></div><div class="subj-info"><div class="subj-n">เขียนแบบการเชื่อมและโลหะแผ่น</div><div class="subj-meta">20103-2008 · ท. 1 + ป. 3 ชม. (เลือก)</div></div><div class="subj-cr-pill cr-e">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#8E44AD"></div><div class="subj-info"><div class="subj-n">เขียนแบบโครงสร้าง</div><div class="subj-meta">20103-2023 · ท. 1 + ป. 3 ชม. (เลือก)</div></div><div class="subj-cr-pill cr-e">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FFD700"></div><div class="subj-info"><div class="subj-n">กิจกรรมองค์การวิชาชีพ 1</div><div class="subj-meta">20000-2004 · ป. 2 ชม./สัปดาห์</div></div><div class="subj-cr-pill cr-a">ไม่นับนก.</div></div>
+        <div class="cat-tag">แกนกลาง</div>
+        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">ภาษาอังกฤษโครงงานบูรณาการวิชาชีพ</div><div class="subj-meta">20000-1202 · ป.2ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">ภาษาอังกฤษอินเทอร์เน็ต</div><div class="subj-meta">20000-1205 · ป.2ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
+        <div class="cat-tag">วิชาชีพพื้นฐาน</div>
+        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">ธุรกิจเบื้องต้น</div><div class="subj-meta">20001-1003 · ท.1+ป.2ชม.</div></div><div class="subj-cr-pill cr-b">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#27AE60"></div><div class="subj-info"><div class="subj-n">กฎหมายแรงงาน</div><div class="subj-meta">20001-1004 · ท.1ชม.</div></div><div class="subj-cr-pill cr-b">1 นก.</div></div>
+        <div class="cat-tag">วิชาชีพเฉพาะ</div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 เชื่อมอาร์กด้วยลวดเชื่อมหุ้มฟลักซ์ 2</div><div class="subj-meta">20103-2003 · ป.6ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 เชื่อมอาร์กทังสเตนแก๊สคลุม2</div><div class="subj-meta">20103-2020 · ป.6ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 เชื่อมอาร์กโลหะแก๊สคลุม2</div><div class="subj-meta">20103-2021 · ป.6ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="cat-tag">วิชาเลือกเสรี</div>
+        <div class="subj-item"><div class="subj-dot" style="background:#8E44AD"></div><div class="subj-info"><div class="subj-n">เขียนแบบการเชื่อมและโลหะแผ่น</div><div class="subj-meta">20103-2008 · ท.1+ป.3ชม.</div></div><div class="subj-cr-pill cr-e">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#8E44AD"></div><div class="subj-info"><div class="subj-n">เขียนแบบโครงสร้าง</div><div class="subj-meta">20103-2023 · ท.1+ป.3ชม.</div></div><div class="subj-cr-pill cr-e">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FFD700"></div><div class="subj-info"><div class="subj-n">กิจกรรมองค์การวิชาชีพ 1</div><div class="subj-meta">20000-2004 · ป.2ชม./สัปดาห์</div></div><div class="subj-cr-pill cr-a">ไม่นับนก.</div></div>
       </div>
     </div>
 
-    <!-- ภาค 1/70 -->
+    <!-- ภาค 1/2570 -->
     <div class="sem-card">
       <div class="sem-header t1-hdr">
-        <div class="sem-title">🔵 ภาคเรียน 1 / 2570<br><small style="font-size:11px;font-weight:400;color:rgba(255,255,255,0.7)">ปวช. ปีที่ 3</small></div>
-        <div class="sem-cr">13 นก.</div>
+        <div class="sem-title">🔵 ภาคเรียน 1 / 2570<br><small style="font-size:11px;font-weight:400;opacity:0.7">ปวช. ปีที่ 3</small></div>
+        <div class="sem-cr">11 นก.</div>
       </div>
       <div class="subj-list">
-        <div style="font-size:10px;font-weight:700;color:#8892A4;padding:4px 8px 2px;letter-spacing:1px;">วิชาชีพเฉพาะ</div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 ทดสอบแบบไม่ทำลายสภาพ (NDT)</div><div class="subj-meta">20103-2005 · ท. 1 + ป. 3 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 งานสี</div><div class="subj-meta">20103-2017 · ป. 6 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 เชื่อมอาร์กลวดเชื่อมหุ้มฟลักซ์ 3</div><div class="subj-meta">20103-2018 · ป. 6 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 เชื่อมซ่อมบำรุง</div><div class="subj-meta">20103-2019 · ป. 6 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🏆 บริการวิชาชีพงานผลิตภัณฑ์</div><div class="subj-meta">20103-2054 · ป. 6 ชม. (ออกสู่ชุมชน)</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FFD700"></div><div class="subj-info"><div class="subj-n">กิจกรรมในสถานประกอบการ</div><div class="subj-meta">20000-2007 · ป. 2 ชม./สัปดาห์</div></div><div class="subj-cr-pill cr-a">ไม่นับนก.</div></div>
+        <div class="cat-tag">แกนกลาง</div>
+        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">ภาษาอังกฤษสถานประกอบการ</div><div class="subj-meta">20000-1204 · ป.2ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
+        <div class="cat-tag">วิชาชีพเฉพาะ</div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 ทดสอบแบบไม่ทำลายสภาพ</div><div class="subj-meta">20103-2005 · ท.1+ป.3ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 งานสี</div><div class="subj-meta">20103-2017 · ป.6ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 เชื่อมอาร์กด้วยลวดเชื่อมหุ้มฟลักซ์ 3</div><div class="subj-meta">20103-2018 · ป.6ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 เชื่อมซ่อมบำรุง</div><div class="subj-meta">20103-2019 · ป.6ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🏆 บริการวิชาชีพงานผลิตภัณฑ์</div><div class="subj-meta">20103-2054 · ป.6ชม. (ออกสู่ชุมชน)</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FFD700"></div><div class="subj-info"><div class="subj-n">กิจกรรมในสถานประกอบการ</div><div class="subj-meta">20000-2007 · ป.2ชม./สัปดาห์</div></div><div class="subj-cr-pill cr-a">ไม่นับนก.</div></div>
         <div style="background:rgba(255,69,0,0.08);border:1px dashed rgba(255,69,0,0.3);border-radius:8px;padding:8px 10px;margin-top:8px;font-size:11px;color:#FF9070;">
           ⚠️ ภาคเรียนนี้เน้นทักษะปฏิบัติระดับสูง ฝึกงานจริงในสถานประกอบการ
         </div>
       </div>
     </div>
 
-    <!-- ภาค 2/70 -->
+    <!-- ภาค 2/2570 -->
     <div class="sem-card">
       <div class="sem-header t2-hdr">
-        <div class="sem-title">🟣 ภาคเรียน 2 / 2570<br><small style="font-size:11px;font-weight:400;color:rgba(255,255,255,0.7)">ปวช. ปีที่ 3 · ภาคสุดท้าย</small></div>
-        <div class="sem-cr">16 นก.</div>
+        <div class="sem-title">🟣 ภาคเรียน 2 / 2570<br><small style="font-size:11px;font-weight:400;opacity:0.7">ปวช. ปีที่ 3 · ภาคสุดท้าย</small></div>
+        <div class="sem-cr">17 นก.</div>
       </div>
       <div class="subj-list">
-        <div style="font-size:10px;font-weight:700;color:#8892A4;padding:4px 8px 2px;letter-spacing:1px;">แกนกลาง</div>
-        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">ภาษาอังกฤษเตรียมพร้อมทำงาน</div><div class="subj-meta">20000-1221 · ป. 2 ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">ภาษาอังกฤษโครงงานบูรณาการ</div><div class="subj-meta">20000-1202 · ป. 2 ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
-        <div style="font-size:10px;font-weight:700;color:#8892A4;padding:4px 8px 2px;letter-spacing:1px;margin-top:6px;">วิชาชีพเฉพาะ</div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 โลหะวิทยาเบื้องต้น</div><div class="subj-meta">20103-2014 · ท. 1 + ป. 3 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 งานผลิตภัณฑ์อะลูมิเนียม</div><div class="subj-meta">20103-2015 · ป. 6 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 วัสดุช่างเชื่อม</div><div class="subj-meta">20103-2016 · ท. 2 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🏆 โครงงานด้านช่างเชื่อมโลหะ</div><div class="subj-meta">20103-2056 · ป. 4 ชม. (Project)</div></div><div class="subj-cr-pill cr-s" style="background:rgba(255,215,0,0.25);color:#FFD700;">4 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">กลศาสตร์เครื่องกล</div><div class="subj-meta">20103-2022 · ท. 2 ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#8E44AD"></div><div class="subj-info"><div class="subj-n">ผลิตภัณฑ์พลาสติก / ความแข็งแรงวัสดุ</div><div class="subj-meta">20103-2033/2036 (เลือก)</div></div><div class="subj-cr-pill cr-e">2+2 นก.</div></div>
-        <div class="subj-item"><div class="subj-dot" style="background:#FFD700"></div><div class="subj-info"><div class="subj-n">กิจกรรมองค์การวิชาชีพ 2</div><div class="subj-meta">20000-2005 · ป. 2 ชม./สัปดาห์</div></div><div class="subj-cr-pill cr-a">ไม่นับนก.</div></div>
+        <div class="cat-tag">แกนกลาง</div>
+        <div class="subj-item"><div class="subj-dot" style="background:#3498DB"></div><div class="subj-info"><div class="subj-n">ภาษาอังกฤษเพื่อเตรียมความพร้อมเพื่อการทำงาน</div><div class="subj-meta">20000-1221 · ป.2ชม.</div></div><div class="subj-cr-pill cr-c">1 นก.</div></div>
+        <div class="cat-tag">วิชาชีพเฉพาะ</div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 โลหะวิทยาเบื้องต้น</div><div class="subj-meta">20103-2014 · ท.1+ป.3ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 งานผลิตภัณฑ์อะลูมิเนียม</div><div class="subj-meta">20103-2015 · ป.6ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">🔥 วัสดุช่างเชื่อม</div><div class="subj-meta">20103-2016 · ท.2ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FFD700"></div><div class="subj-info"><div class="subj-n">🏆 โครงงานด้านช่างเชื่อมโลหะ</div><div class="subj-meta">20103-2056 · ป.4ชม. (Project งานสร้างสรรค์)</div></div><div class="subj-cr-pill cr-s" style="background:rgba(255,215,0,0.25);color:#FFD700;">4 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FF4500"></div><div class="subj-info"><div class="subj-n">กลศาสตร์เครื่องกล</div><div class="subj-meta">20103-2022 · ท.2ชม.</div></div><div class="subj-cr-pill cr-s">2 นก.</div></div>
+        <div class="cat-tag">วิชาเลือกเสรี</div>
+        <div class="subj-item"><div class="subj-dot" style="background:#8E44AD"></div><div class="subj-info"><div class="subj-n">ผลิตภัณฑ์พลาสติก</div><div class="subj-meta">20103-2033 · ท.1+ป.3ชม.</div></div><div class="subj-cr-pill cr-e">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#8E44AD"></div><div class="subj-info"><div class="subj-n">ความแข็งแรงของวัสดุ</div><div class="subj-meta">20103-2036 · ท.2ชม.</div></div><div class="subj-cr-pill cr-e">2 นก.</div></div>
+        <div class="subj-item"><div class="subj-dot" style="background:#FFD700"></div><div class="subj-info"><div class="subj-n">กิจกรรมองค์การวิชาชีพ 2</div><div class="subj-meta">20000-2005 · ป.2ชม./สัปดาห์</div></div><div class="subj-cr-pill cr-a">ไม่นับนก.</div></div>
         <div style="background:rgba(255,215,0,0.08);border:1px dashed rgba(255,215,0,0.3);border-radius:8px;padding:8px 10px;margin-top:8px;font-size:11px;color:#FFD700;">
-          🎓 ภาคนี้มีโครงงาน 4 นก. — เป็นงานสรุปความสามารถก่อนสำเร็จการศึกษา
+          🎓 โครงงาน 4 นก. — งานสรุปความสามารถก่อนสำเร็จการศึกษา
         </div>
       </div>
     </div>
 
-  </div><!-- end sem-grid -->
+  </div>
 </div>
 
 <div class="divider"></div>
@@ -526,7 +319,7 @@
       <div class="career-icon">🏭</div>
       <div class="career-title">ช่างเชื่อมในภาคอุตสาหกรรม</div>
       <ul class="career-list">
-        <li>ช่างเชื่อม SMAW / MIG / TIG ในโรงงาน</li>
+        <li>ช่างเชื่อม SMAW / MIG-MAG / TIG ในโรงงาน</li>
         <li>ช่างเชื่อมโครงสร้างโลหะและถังรับแรงดัน</li>
         <li>ช่างผลิตชิ้นส่วนยานยนต์และเครื่องจักร</li>
         <li>ช่างซ่อมบำรุงงานเชื่อม</li>
@@ -561,9 +354,9 @@
 <div class="footer">
   <div>
     <strong>วิทยาลัยการอาชีพบุรีรัมย์</strong> · แผนกช่างเชื่อมโลหะ · สอศ.<br>
-    หลักสูตร ปวช. พ.ศ. 2567 · ปีการศึกษา 2568–2570
+    หลักสูตร ปวช. พ.ศ. 2567 · ปีการศึกษา 2568–2570 · ทั้ง 6 ภาคเรียน
   </div>
-  <div style="text-align:right; color:#5A6275;">
+  <div style="text-align:right;color:#5A6275;">
     🔥 = วิชาชีพเฉพาะด้านการเชื่อม &nbsp;|&nbsp; 🏆 = วิชาสำคัญสูงสุด<br>
     ท. = ชั่วโมงทฤษฎี &nbsp;|&nbsp; ป. = ชั่วโมงปฏิบัติ &nbsp;|&nbsp; นก. = หน่วยกิต
   </div>
